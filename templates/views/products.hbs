@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Products</h1>
+  <div class="row">
+    <div class="col-md-12 col-lg-12">
+      <div class="row">
+        {{# each products}}
+          <div class="col-md-4 col-lg-4">
+            <h2><a href="{{productUrl slug}}">{{{title}}}</a></h2>
+            {{#if image}}
+              <img src="{{{cloudinaryUrl image width=160 height=160 crop="fit"}}}" class="thumbnail">
+            {{/if}}
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>
